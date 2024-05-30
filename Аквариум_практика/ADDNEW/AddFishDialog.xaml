@@ -1,0 +1,65 @@
+﻿<Window x:Class="Аквариум_практика.ADDNEW.AddFishDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Аквариум_практика.ADDNEW"
+        mc:Ignorable="d"
+        Title="Добавление аквариумной рыбы" Height="525" Width="800">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,0,59">
+        <Grid Margin="10" Height="422">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="106*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Название рыбы:" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,10"/>
+            <TextBox x:Name="txtName" Grid.Row="1" Margin="0,5,0,5" Grid.ColumnSpan="2"/>
+
+            <Label Content="Размер рыбы:" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,10"/>
+            <TextBox x:Name="txtmaximumSize" Grid.Row="3" Margin="0,5,0,5" Grid.ColumnSpan="2"/>
+
+            <Label Content="Температура воды:" Grid.Row="4" Grid.ColumnSpan="2" Margin="0,0,0,10"/>
+            <TextBox x:Name="txtwaterTemperature" Grid.Row="5" Margin="0,5,0,5" Grid.ColumnSpan="2"/>
+
+            <Label Content="Кислотность воды:" Grid.Row="6" Grid.ColumnSpan="2" Margin="0,0,0,10"/>
+            <TextBox x:Name="txtpHOfThewater" Grid.Row="7" Margin="0,5,0,5" Grid.ColumnSpan="2"/>
+
+            <Label Content="Объем аквариума:" Grid.Row="8" Margin="0,0,330,10" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txtrequiredVolumeAquarium" Grid.Row="9" Margin="0,5,0,5" Grid.ColumnSpan="2"/>
+
+            <Label Content="Укрытия:" Grid.Row="10" Margin="0,0,330,10" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txttheNeedShelters" Grid.Row="10" Margin="0,23,0,-5" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="3.999"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.628"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <StackPanel Grid.Row="14" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,-48" Grid.ColumnSpan="2">
+                <Button Content="Сохранить" Click="SaveButton_Click" Margin="0,0,10,0"/>
+                <Button Content="Отменить" Click="CancelButton_Click"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

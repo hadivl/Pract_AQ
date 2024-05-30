@@ -1,0 +1,23 @@
+﻿<Window x:Class="Аквариум_практика.ADDNEW.PlanAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Аквариум_практика.Edit"
+        mc:Ignorable="d"
+        Title="Редактировать Растение" Height="200" Width="300">
+    <Grid>
+        <TextBlock Text="Тип растения:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TypeTextBox" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="280"/>
+
+        <TextBlock Text="Длина листьев:" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="LeafLengthTextBox" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" Width="280"/>
+
+        <TextBlock Text="Рыба:" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="IdAquaFishComboBox"  DisplayMemberPath="Content" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="280"/>
+
+        <Button Content="Сохранить" x:Name="SaveButton" Click="SaveButton_Click" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Width="130"/>
+        <Button Content="Отмена" x:Name="CancelButton" Click="CancelButton_Click" HorizontalAlignment="Left" Margin="150,160,0,0" VerticalAlignment="Top" Width="130"/>
+
+    </Grid>
+</Window>

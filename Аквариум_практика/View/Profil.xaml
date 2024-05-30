@@ -1,0 +1,50 @@
+﻿<Window x:Class="Аквариум_практика.View.Profil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Аквариум_практика.View"
+        mc:Ignorable="d"
+        Title="Профиль пользователя" Height="470" Width="525" MinWidth="500" 
+        MinHeight="480" MaxWidth="500" MaxHeight="480">
+
+    <Grid Background="#D1EEFC" Margin="10,10,10,9" Width="475" Height="425">
+        <Image Source="/Image/logo.png" Margin="6,4,0,0" Width="74" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Border Background="#F8FFF6" CornerRadius="10" Padding="10" Margin="45,34,50,21">
+            <StackPanel>
+                <Grid Height="65">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="1" 
+           Text="Профиль пользователя" 
+           VerticalAlignment="Center" 
+           Margin="5,0,5,0" 
+           Height="30" 
+           HorizontalAlignment="Center" 
+           FontSize="24"/>
+                </Grid>
+
+                <StackPanel Orientation="Horizontal" Height="85">
+                    <TextBlock Text="Имя пользователя: " FontSize="16" Height="77" Width="140"/>
+                    <TextBlock x:Name="FullNameTextBlock" Text="{Binding NameUser}" FontSize="16" Margin="5,0" Foreground="Black"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Height="85" Width="358">
+                    <TextBlock Text="Логин пользователя: " FontSize="16"/>
+                    <TextBlock x:Name="LoginTextBlock" Text="{Binding LoginUser}" FontSize="16" Margin="5,0" Foreground="Black"/>
+                </StackPanel>
+
+
+            </StackPanel>
+        </Border>
+
+        <Button Content="◀" Width="20" Height="25" HorizontalAlignment="Left" Margin="60,337,0,63" 
+                RenderTransformOrigin="0.9,0.76" Click="Button_Click"/>
+        <Button Content="Выйти" Margin="0,299,0,89" HorizontalAlignment="Center" Background="#F38D8B" Height="37" Width="65" Click="Button_Click_1"/>
+        <Label Content="ООО 'АКВАМИР'" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="190,0,0,-3"/>
+    </Grid>
+</Window>

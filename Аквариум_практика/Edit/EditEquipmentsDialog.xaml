@@ -1,0 +1,50 @@
+﻿<Window x:Class="Аквариум_практика.Edit.EditEquipmentsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Аквариум_практика.Edit"
+        mc:Ignorable="d"
+        Title="EditEquipmentsWindows" Height="320" Width="495">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="10" Height="279">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Освещение:" Grid.Row="0" Grid.Column="0" Margin="0,0,5,5"/>
+            <TextBox x:Name="txtLightingr" Grid.Row="0" Grid.Column="1" Margin="0,0,0,5"/>
+
+            <Label Content="Контроль температуры:" Grid.Row="1" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="txtTemperatureControl" Grid.Row="1" Grid.Column="1" Margin="0,5,0,5"/>
+
+            <Label Content="Очистка воды:" Grid.Row="2" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="txtWaterPurification" Grid.Row="2" Grid.Column="1" Margin="0,5,0,5"/>
+
+            <Label Content="Дополнительное оборудование:" Grid.Row="3" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="txtAdditionalEquipment" Grid.Row="3" Grid.Column="1" Margin="1,5,0,5"/>
+
+            <Label Content="Аквариум:" Grid.Row="4" Grid.Column="0" Margin="0,5,0,5"/>
+            <ComboBox x:Name="cbAquarium" Grid.Row="4" Margin="189,8,1,6" Grid.ColumnSpan="2"/>
+
+            <StackPanel Grid.Row="9" Orientation="Horizontal" HorizontalAlignment="Left" Margin="51,10,0,10" Grid.Column="1">
+                <Button Content="Сохранить" Click="SaveButton_Click" MinWidth="80"/>
+                <Button Content="Отмена" Click="CancelButton_Click" MinWidth="80" Margin="10,0,0,0"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

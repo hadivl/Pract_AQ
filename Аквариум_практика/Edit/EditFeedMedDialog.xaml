@@ -1,0 +1,45 @@
+﻿<Window x:Class="Аквариум_практика.Edit.EditFeedMedDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Аквариум_практика.Edit"
+        mc:Ignorable="d"
+        Title="EditFeedMedDialog" Height="200" Width="400">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,5,0">
+        <Grid Margin="10" Height="169">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Название корма:" Grid.Row="0" Grid.Column="0" Margin="0,0,5,5"/>
+            <TextBox x:Name="NameFeedTextBox" Grid.Row="0" Margin="123,0,-2,5" Grid.ColumnSpan="2"/>
+
+            <Label Content="Тип корма:" Grid.Row="1" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="TypeFeedTextBox" Grid.Row="1" Margin="123,5,-2,5" Grid.ColumnSpan="2"/>
+
+            <Label Content="Название лекарства:" Grid.Row="5" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="NameMedTextBox" Grid.Row="5" Margin="123,5,-2,5" Grid.ColumnSpan="2"/>
+
+            <Label Content="Тип лекарства:" Grid.Row="7" Grid.Column="0" Margin="2,1,233,-17" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <TextBox x:Name="TypeMedTextBox" Grid.Row="8" Margin="123,1,-2,-22" Grid.ColumnSpan="2"/>
+
+            <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Left" Margin="25,41,0,-51" Grid.ColumnSpan="2" Width="319" Grid.RowSpan="2">
+                <Button Content="Сохранить" Click="SaveButton_Click" MinWidth="80"/>
+                <Button Content="Отмена" Click="CancelButton_Click" MinWidth="80" Margin="10,0,0,0"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

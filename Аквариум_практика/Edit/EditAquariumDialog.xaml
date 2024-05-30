@@ -1,0 +1,50 @@
+﻿<Window x:Class="Аквариум_практика.Edit.EditAquariumDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="Редактирование аквариума" Height="260" Width="420" ResizeMode="NoResize">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="10" Height="229">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Тип конструкции:" Grid.Row="0" Grid.Column="0" Margin="0,0,5,5"/>
+            <TextBox x:Name="txtTypeConstruction" Grid.Row="0" Grid.Column="1" Margin="0,0,0,5"/>
+
+            <Label Content="Местоположение:" Grid.Row="1" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="txtLocation" Grid.Row="1" Grid.Column="1" Margin="0,5,0,5"/>
+
+            <Label Content="Тип размера:" Grid.Row="2" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="txtScope" Grid.Row="2" Grid.Column="1" Margin="0,5,0,5"/>
+
+            <Label Content="Форма:" Grid.Row="3" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="txtShape" Grid.Row="3" Grid.Column="1" Margin="0,5,0,5"/>
+
+            <Label Content="Объем:" Grid.Row="4" Grid.Column="0" Margin="0,5,0,5"/>
+            <TextBox x:Name="txtVolume" Grid.Row="4" Grid.Column="1" Margin="0,5,0,5"/>
+
+
+
+
+    <StackPanel Grid.Row="9" Orientation="Horizontal" HorizontalAlignment="Left" Margin="51,10,0,10" Grid.Column="1">
+                <Button Content="Сохранить" Click="SaveButton_Click" MinWidth="80"/>
+                <Button Content="Отмена" Click="CancelButton_Click" MinWidth="80" Margin="10,0,0,0"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>
